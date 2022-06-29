@@ -1,0 +1,167 @@
+<div class="LYAF-side-bar">
+    <div class="LYAF-side-bar-header">
+        <span class="LYAF-side-bar-title text-uppercase font-weight-bold">Dasboard</span>
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="LYAF-side-bar-menu">
+        <div class="LYAF-admin-menu LYAF-menu">
+        </div>
+        <div class="LYAF-user-menu LYAF-menu">
+            <div class="LYAF-menu-header">
+                <i class="fas fa-users icon"></i>
+                <span class="title">Account</span>
+                <i class="fas fa-chevron-right end"></i>
+            </div>
+            <div class="LYAF-menu-content">
+               <div class="LYAF-menu-option">
+                    <a href="/manager/account">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">List of Accounts</span>
+                    </a>
+                </div>
+                 <div class="LYAF-menu-option">
+                    <a href="/manager/account/add">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">Add New Account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="LYAF-product-menu LYAF-menu">
+            <div class="LYAF-menu-header">
+                <i class="fas fa-receipt icon"></i>
+                <span class="title">Comment</span>
+                <i class="fas fa-chevron-right end"></i>
+            </div>
+            <div class="LYAF-menu-content">
+                <div class="LYAF-menu-option">
+                    <a href="/manager/comment">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">Comment Manager</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="LYAF-product-menu LYAF-menu">
+            <div class="LYAF-menu-header">
+                <i class="fab fa-product-hunt icon"></i>
+                <span class="title">Post</span>
+                <i class="fas fa-chevron-right end"></i>
+            </div>
+            <div class="LYAF-menu-content">
+                <div class="LYAF-menu-option">
+                    <a href="/manager/post">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">List of Posts</span>
+                    </a>
+                </div>
+                <div class="LYAF-menu-option">
+                    <a href="/manager/post/add">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">New Post</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ {{!-- Dashboard body --}}
+    <div class="LYAF-dasboard-body">
+        <div class="LYAF-dashboard-header">
+            <span class="text-uppercase font-weight-bold">LIST OF POSTS</span>
+        </div>
+        <div class="postList">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Options</th>
+                   
+                    </tr>
+                </thead>
+                <tbody id="post-tbody">
+                    {{#each posts}}
+                    <tr class="post-row" id="{{this._id}}">
+                        <td class="post-name">{{this.name}}</td>
+                        <td class="post-desc">{{this.desc}}</td>
+                        <td class="post-options">
+                        
+                            <button type="button" class="btn btn-success post-edit" id="{{this._id}}" data-toggle="modal" data-target="#updateModal">Edit</button>
+                            <button type="button" class="btn btn-danger post-delete" id="{{this._id}}" data-toggle="modal" data-target="#deleteModal">Delete</button>
+
+                        </td>
+                    </tr>
+                    {{/each}}
+                    {{#if empty}}
+                    <tr class="post-row">
+                        <td>  <p>List is Empty !.
+                        <a href="/manager/post/add">Add a new post here</a></p></td>
+                      
+                     </tr>   
+                    {{/if}}
+                </tbody>
+                </table>
+        </div>
+                 
+    </div>
+    {{!-- End Dashboard body --}}
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Warning</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger deleteaccept">Delete now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    
+            <div class="form-group">
+                <label for="updatename">Name:</label>
+                <input type="text" class="form-control" id="post-updatename">
+            </div>
+           <div class="form-group">
+                    <label for="updatedesc">Description:</label>
+                    <textarea class="form-control" id="post-updatedesc"></textarea>
+            </div>
+            <div class="form-group">
+                    <label for="updatepurport">Purport:</label>
+                    <textarea class="form-control" id="post-updatepurport"></textarea>
+            </div>
+            <div class="form-group">
+                    <label for="updateimg">Image:</label>
+                    <input type="file" class="form-control-file" id="post-updateimg" name="updatepostimg">
+                </div>
+   
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success updateaccept">Update now</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/manager.js"></script>

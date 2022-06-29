@@ -1,0 +1,100 @@
+<div class="LYAF-side-bar">
+    <div class="LYAF-side-bar-header">
+        <span class="LYAF-side-bar-title text-uppercase font-weight-bold">Dasboard</span>
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="LYAF-side-bar-menu">
+        <div class="LYAF-admin-menu LYAF-menu">
+        </div>
+        <div class="LYAF-user-menu LYAF-menu">
+            <div class="LYAF-menu-header">
+                <i class="fas fa-users icon"></i>
+                <span class="title">Account</span>
+                <i class="fas fa-chevron-right end"></i>
+            </div>
+            <div class="LYAF-menu-content">
+                <div class="LYAF-menu-option">
+                    <a href="/manager/account">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">List of Accounts</span>
+                    </a>
+                </div>
+                 <div class="LYAF-menu-option">
+                    <a href="/manager/account/add">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">Add New Account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="LYAF-product-menu LYAF-menu">
+            <div class="LYAF-menu-header">
+                <i class="fas fa-receipt icon"></i>
+                <span class="title">Comment</span>
+                <i class="fas fa-chevron-right end"></i>
+            </div>
+            <div class="LYAF-menu-content">
+                <div class="LYAF-menu-option">
+                    <a href="/manager/comment">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">Comment Manager</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="LYAF-product-menu LYAF-menu">
+            <div class="LYAF-menu-header">
+                <i class="fab fa-product-hunt icon"></i>
+                <span class="title">Post</span>
+                <i class="fas fa-chevron-right end"></i>
+            </div>
+            <div class="LYAF-menu-content">
+                <div class="LYAF-menu-option">
+                    <a href="/manager/post">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">List of Posts</span>
+                    </a>
+                </div>
+                <div class="LYAF-menu-option">
+                    <a href="/manager/post/add">
+                        <i class="fas fa-circle icon"></i>
+                        <span class="title">New Post</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ {{!-- Dashboard body --}}
+    <div class="LYAF-dasboard-body">
+        <div class="LYAF-dashboard-header">
+            <span class="text-uppercase font-weight-bold">ADD A NEW POST</span>
+        </div>
+       <div class="addform post-addform">
+           <div class="form postForm">
+               <div id="postadd-title">
+                   <span>CREATE POST</span>
+               </div>
+                <div class="form-group">
+                    <label for="username">Post's Name:</label>
+                    <input type="text" class="form-control" id="post-addname" name="postname">
+                </div>
+                 <div class="form-group">
+                    <label for="desc">Post's Description:</label>
+                     <textarea class="form-control" id="post-adddesc"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="purport">Purport:</label>
+                    <textarea class="form-control" id="post-addpurport"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="img">Image:</label>
+                    <input type="file" class="form-control-file" id="post-addimg" name="postimg">
+                </div>
+                 <button type="submit" class="btn btn-success" id="addpostbtn" style="width: 100px;">Create</button>
+            </div>
+       </div>
+                 
+    </div>
+    {{!-- End Dashboard body --}}
+<script src="/js/manager.js"></script>

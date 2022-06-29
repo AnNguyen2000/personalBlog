@@ -1,0 +1,259 @@
+.LYAF-side-bar {
+    z-index: 10;
+    width: 250px;
+    height: 100%;
+    left: -180px;
+    top: 0;
+    position: fixed;
+    background-color: #1E1E2D;
+    transition: 0.5s;
+    overflow-y: auto; }
+  
+  .LYAF-side-bar .LYAF-side-bar-header {
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px;
+    color: white;
+    background-color: #1B1B28; }
+  
+  .LYAF-side-bar .LYAF-side-bar-header i {
+    font-size: 25px; }
+  
+  .LYAF-side-bar .LYAF-side-bar-header span {
+    font-size: 20px; }
+  
+  .LYAF-side-bar .LYAF-side-bar-menu {
+    position: relative;
+    top: 100px;
+    padding-bottom: 25px; }
+  
+  .LYAF-side-bar-menu .LYAF-menu {
+    color: #b7b7b9;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s; }
+  
+  .LYAF-side-bar-menu .LYAF-menu-header {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: row;
+    align-items: center; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .title {
+    position: relative;
+    left: 0;
+    margin-left: 20px; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .LYAF-menu-header .icon {
+    width: 30px;
+    position: relative;
+    left: 0;
+    font-size: 25px;
+    transition: 0.5s; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .end {
+    position: absolute;
+    right: 20px;
+    transition: 0.5s; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .LYAF-menu-option {
+    padding: 25px;
+    padding-top: 0;
+    padding-bottom: 0; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .LYAF-menu-content {
+    display: none; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .LYAF-menu-content .LYAF-menu-option {
+    padding: 25px;
+    padding-left: 35px; }
+    .LYAF-side-bar-menu .LYAF-menu .LYAF-menu-content .LYAF-menu-option a {
+      text-decoration: none;
+      color: #b7b7b9; }
+  
+  .LYAF-side-bar-menu .LYAF-menu .LYAF-menu-content .LYAF-menu-option .icon {
+    font-size: 10px; }
+  
+  .LYAF-dasboard-body {
+    position: relative;
+    left: 0;
+    padding-left: 70px;
+    background-color: #F5F8FA;
+    transition: 0.5s; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-header {
+    z-index: 9;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    box-shadow: 1px 1px 50px 1px #F5F8FA; }
+  
+  .LYAF-dasboard-body .row {
+    margin: 0; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-content {
+    margin-top: 60px;
+    margin-bottom: 60px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-header span {
+    font-size: 20px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block {
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 25px;
+    border-radius: 10px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .splide__slide {
+    margin: 10px;
+    box-shadow: 1px 1px 10px 1px #a8a8a8;
+    border-radius: 10px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .splide__track {
+    padding: 10px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .splide__slide img {
+    width: 200px;
+    height: auto; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-block-title {
+    font-size: 20px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-block-content {
+    margin: 10px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .description {
+    padding: 20px;
+    background-color: #eafdfd;
+    border: 1px dashed #b8b8b8;
+    border-radius: 10px;
+    color: #646464; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-image {
+    display: flex;
+    flex-direction: row; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .insert-image {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-name,
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-description,
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-price,
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-category,
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-ID {
+    display: flex;
+    flex-direction: column; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-name span,
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-description span {
+    margin-bottom: 10px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-name input {
+    padding: 10px;
+    border: 2px dashed #b8b8b8;
+    outline-width: 2px;
+    outline-color: #b8b8b8;
+    margin-bottom: 10px; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-product-description textarea {
+    min-height: 100% !important; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-tooltip {
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 10px;
+    border: #1E1E2D;
+    background-color: #b8b8b8;
+    display: none; }
+  
+  .LYAF-dasboard-body .LYAF-dashboard-block .LYAF-preview-wrapper .image-upload {
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer; }
+
+  .postList{
+    width: 100%;
+    position: relative;
+    top: 100px;
+    height: 500px;
+    overflow: visible;
+  }
+  .postList table{
+    overflow: visible;
+  }
+.post-row{
+  width: 100%;
+  .post-desc{
+    width: 50%;
+  }
+  .post-options{
+    width:20%;
+    
+  }
+  .post-options button{
+    min-width: 100px;
+  }
+}
+.addform{
+  width: 100%;
+
+  height: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  .postForm{
+    margin-top: 50px;
+    border:2px solid #1B1B28;
+    color:black;
+    #postadd-title{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      span{
+        color:black;
+        font-weight: bold;
+        font-size: 35px;
+      }
+    }
+  }
+  
+}
+
+.accList,.comList{
+  width: 100%;
+  position: relative;
+  top: 100px;
+  height: 500px;
+  overflow: visible;
+  
+}
+.acc-username,.acc-pass{
+  word-break: break-all;
+}
+.com-name{
+  width: 30%;
+}
+.com-post{
+  width: 30%;
+}
+.com-purport{
+  width: 40%;
+}
+

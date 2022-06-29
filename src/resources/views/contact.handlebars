@@ -1,0 +1,97 @@
+	<header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-site-header">
+                <div class="mb-3 mx-auto tm-site-logo"><i class="fas fa-laptop-code"></i></div>            
+                <h1 class="text-center">IT Blog</h1>
+            </div>
+            <nav class="tm-nav" id="tm-nav">            
+                <ul>
+                    {{#if boss}}
+                    <li class="tm-nav-item"><a href="#" class="tm-nav-link">
+                        Welcome to IT Blog
+                    </a></li>
+                    {{/if}}
+                    {{#ifEquals boss 1}}
+                     <li class="tm-nav-item"><a href="/manager/post" class="tm-nav-link">
+                        <i class="fas fa-clipboard-list"></i>
+                        Manager
+                    </a></li>
+                      {{/ifEquals}}
+                    <li class="tm-nav-item "><a href="/" class="tm-nav-link">
+                        <i class="fas fa-home"></i>
+                        Blog Home
+                    </a></li>
+                    <li class="tm-nav-item"><a href="/about" class="tm-nav-link">
+                        <i class="fas fa-users"></i>
+                        About me
+                    </a></li>
+                    <li class="tm-nav-item active"><a href="/contact" class="tm-nav-link">
+                        <i class="far fa-comments"></i>
+                        Contact me
+                    </a></li>
+                    {{#if boss}}
+                    <li class="tm-nav-item"><a href="/logout" class="tm-nav-link">
+                        <i class="fas fa-key"></i>
+                        Log out
+                    </a></li>
+                    {{/if}}
+                    {{#ifEquals boss 0}}
+                    <li class="tm-nav-item"><a href="/login" class="tm-nav-link">
+                        <i class="fas fa-key"></i>
+                        Log in
+                    </a></li>
+                  {{/ifEquals}}
+                     
+                    
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main class="tm-main">
+
+                <div class="col-lg-5 tm-contact-right">
+                    <span class="d-block">
+                        Tel:
+                        <a href="#" class="tm-color-gray">0902-622-995</a>
+                    </span>
+                    <span class="mb-4 d-block">
+                        Email:
+                        <a href="#" class="tm-color-gray">51800166@student.tdtu.edu.vn</a>
+                    </span>
+                    <p class="mb-5 tm-line-height-short">
+                       Just a demo for midterm exam
+                    </p>
+                    <ul class="tm-social-links">
+                        <li class="mb-2">
+                            <a href="https://facebook.com" class="d-flex align-items-center justify-content-center">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://twitter.com" class="d-flex align-items-center justify-content-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://youtube.com" class="d-flex align-items-center justify-content-center">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://instagram.com" class="d-flex align-items-center justify-content-center mr-0">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>      
+            <footer class="row tm-row">
+            </footer>
+        </main>
+    </div>
+    <script src="/js/templatemo-script.js"></script>

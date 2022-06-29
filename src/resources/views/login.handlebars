@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/login.css">
+<div class="loginBody">
+    <form action="/login" method="post">
+        <div class="loginTitle">
+            <span>Log In</span>
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter Password" name="password">
+        </div>
+        {{#if error}}
+            <div class="form-group">
+            <label for="error" style="color: red;">*{{error}}</label>
+           
+        </div>
+        {{/if}}
+        <div class="registerLink">
+            <a href="/register"><span>Tạo tài khoản mới</span></a>
+        </div>
+        <button type="submit" id="loginbtn">Log in</button>
+    </form>
+</div>
+<script src="/js/login.js"></script>
